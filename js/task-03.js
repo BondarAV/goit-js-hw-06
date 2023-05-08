@@ -12,3 +12,24 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const list = document.querySelector(".gallery");
+
+const itemsStrings = [];
+
+images.forEach(image => {
+  // list.insertAdjacentHTML("beforeend",`<li class="item"><img src="${image.url}" alt="${image.alt}"></li>`);
+  itemsStrings.push(`<li class="item"><img src="${image.url}" alt="${image.alt}"></li>`);
+});
+
+const itemsString = itemsStrings.join("");
+
+console.log(itemsString);
+
+list.insertAdjacentHTML("beforeend", itemsString);
+
+const items = list.querySelectorAll("img");
+
+items.forEach(item => {
+  item.classList.add("animal-photo");
+});
