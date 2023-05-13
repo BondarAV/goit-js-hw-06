@@ -34,7 +34,7 @@ button {
   list-style: none;
 }
 
-.item {
+.gallery .item {
   border: 5px solid brown;
   box-shadow: 4px 4px 20px #212121;
 }
